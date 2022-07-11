@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="1b89c8fc-ca01-4fc8-987a-1f04d2e1bb8e" created="3.30.0" activeEnvironment="Default environment" name="OMdb API" resourceRoot="" updated="3.30.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
+  <con:settings>
+    <con:setting id="1b89c8fc-ca01-4fc8-987a-1f04d2e1bb8efileName">OmdbProject</con:setting>
+  </con:settings>
   <con:requirements/>
   <con:properties>
     <con:property>
@@ -12,7 +14,6 @@
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
-  <con:reporting/>
   <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
     <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to ReadyAPI functional tests
