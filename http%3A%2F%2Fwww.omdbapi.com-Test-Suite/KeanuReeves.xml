@@ -13,7 +13,7 @@
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>C:/Users/sarah.souza/OneDrive - SmartBear Software, Inc/Excel/KeanuReevesMovies.xlsx</file>
+          <file>C:/Program Files/SmartBear/ReadyAPI-3.30.0/bin/KeanuReevesMovies.xlsx</file>
           <worksheet/>
           <cell>A1</cell>
           <ignoreEmpty>false</ignoreEmpty>
