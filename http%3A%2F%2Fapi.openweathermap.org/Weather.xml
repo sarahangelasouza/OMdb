@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Weather" path="/data/2.5/weather" id="87867319-609a-45e7-80d1-c4499ab7038d" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="87867319-609a-45e7-80d1-c4499ab7038dfileName">Weather</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Weather" id="9ed54366-51be-4e70-b83d-483c98d88b75" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>q</con:name>
+        <con:value>Boston</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>Boston</con:default>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>appid</con:name>
+        <con:value>85c705dd76051cb3d8e5540b300279d4</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>85c705dd76051cb3d8e5540b300279d4</con:default>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:weat="http://api.openweathermap.org/data/2.5/weather">weat:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="b32ea74b-c815-4120-8635-4a9e0e959528" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://api.openweathermap.org</con:endpoint>
+      <con:credentials/>
+      <con:parameters>
+        <con:entry key="q" value="Boston"/>
+        <con:entry key="appid" value="85c705dd76051cb3d8e5540b300279d4"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>q</con:entry>
+        <con:entry>appid</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

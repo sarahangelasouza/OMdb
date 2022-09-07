@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/?i" path="/?i" id="3d001140-2d28-404c-9716-db59d20907ee" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3d001140-2d28-404c-9716-db59d20907eefileName">%2F%3Fi</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getId" id="453e4845-56bf-4758-a7f7-d02f8a1ab9c3" method="GET">
+    <con:description>Returns a single result based on the ID provided</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>i</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>A valid IMDb ID (e.g. tt0000001)</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>plot</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Return short or full plot</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>r</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>The response type to return</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>callback</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>JSONP callback name</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>apikey</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="1cff007e-cd75-4c91-96bb-5e88f894f951" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://omdbapi.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="apikey" value="fbfa51c9"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>i</con:entry>
+        <con:entry>plot</con:entry>
+        <con:entry>r</con:entry>
+        <con:entry>callback</con:entry>
+        <con:entry>apikey</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
