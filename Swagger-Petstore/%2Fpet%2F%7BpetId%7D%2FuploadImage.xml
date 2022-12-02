@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/pet/{petId}/uploadImage" path="/pet/{petId}/uploadImage" id="83ed2733-c3d7-427d-896e-72d09a05c606" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="83ed2733-c3d7-427d-896e-72d09a05c606fileName">%2Fpet%2F%7BpetId%7D%2FuploadImage</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>petId</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:dataType>integer</con:dataType>
+      <con:description>ID of pet to update</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="uploadFile" id="952d64e8-ab99-43b7-93f5-82441f910ea6" method="POST">
+    <con:description>uploads an image</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>additionalMetadata</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Additional data to pass to server</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>file</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>file to upload</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "code" : 0,
+  "type" : "string",
+  "message" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>multipart/form-data</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="928d3d79-08e0-4879-8e52-2010a87baa07" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

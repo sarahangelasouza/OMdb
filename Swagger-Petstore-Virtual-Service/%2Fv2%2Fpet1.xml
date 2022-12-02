@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/v2/pet" method="PUT" resourcePath="/v2/pet" id="fbafcb77-0d5c-4746-befa-9a3e5258b825" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fbafcb77-0d5c-4746-befa-9a3e5258b825fileName">%2Fv2%2Fpet1</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="2db0c3a4-e74d-4ccd-91ac-958f4eabd35c" httpResponseStatus="400" mediaType="application/xml">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 2" id="6bc78922-58a3-41ac-b2a1-0982f521914d" httpResponseStatus="400" mediaType="application/json">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 3" id="2aca4829-46d1-4c2a-a57f-bfdb20a541e1" httpResponseStatus="404" mediaType="application/xml">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 4" id="c5e8fd50-f8d3-4567-a7f3-7e97792fc7b5" httpResponseStatus="404" mediaType="application/json">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 5" id="0ed7d977-1c44-4562-a060-e68b8f7cd612" httpResponseStatus="405" mediaType="application/xml">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 6" id="4a1c7d0e-6556-4222-bdb9-e16b077443d7" httpResponseStatus="405" mediaType="application/json">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+</con:restMockAction>

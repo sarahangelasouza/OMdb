@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/v2/user/logout" method="GET" resourcePath="/v2/user/logout" id="56a846f1-caac-4be3-b094-d23f5b79c7c8" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="56a846f1-caac-4be3-b094-d23f5b79c7c8fileName">%2Fv2%2Fuser%2Flogout</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="f496495c-2296-40c3-99cd-356957b15c90" httpResponseStatus="200" mediaType="application/xml">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 2" id="b341106c-fbc0-44bf-a9ca-d852813926e7" httpResponseStatus="200" mediaType="application/json">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+</con:restMockAction>
