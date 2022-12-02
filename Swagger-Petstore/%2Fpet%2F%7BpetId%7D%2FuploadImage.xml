@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pet/{petId}/uploadImage" path="/pet/{petId}/uploadImage" id="83ed2733-c3d7-427d-896e-72d09a05c606" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pet/{petId}/uploadImage" path="/pet/{petId}/uploadImage" id="83ed2733-c3d7-427d-896e-72d09a05c606" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="83ed2733-c3d7-427d-896e-72d09a05c606fileName">%2Fpet%2F%7BpetId%7D%2FuploadImage</con:setting>
   </con:settings>
@@ -43,6 +43,10 @@
     <con:request name="Request 1" id="928d3d79-08e0-4879-8e52-2010a87baa07" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

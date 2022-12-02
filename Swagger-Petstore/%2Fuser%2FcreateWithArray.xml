@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/user/createWithArray" path="/user/createWithArray" id="0774d9d5-596c-43c9-ba71-efb50d9eb7ab" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/user/createWithArray" path="/user/createWithArray" id="0774d9d5-596c-43c9-ba71-efb50d9eb7ab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="0774d9d5-596c-43c9-ba71-efb50d9eb7abfileName">%2Fuser%2FcreateWithArray</con:setting>
   </con:settings>
@@ -21,6 +21,10 @@
     <con:request name="Request 1" id="952a88ba-91bf-47c7-8fbf-f3404c0cb513" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>

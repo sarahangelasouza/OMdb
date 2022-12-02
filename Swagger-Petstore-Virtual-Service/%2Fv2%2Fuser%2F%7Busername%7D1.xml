@@ -7,19 +7,19 @@
   <con:dispatchConfig/>
   <con:dispatchXPath/>
   <con:routeScript/>
-  <con:response name="Response 1" id="595f145d-91d5-47df-a3be-614a610baa88" httpResponseStatus="400" mediaType="application/xml">
+  <con:response name="Response 1" id="595f145d-91d5-47df-a3be-614a610baa88" httpResponseStatus="400" mediaType="application/xml" dataSource="">
     <con:settings/>
     <con:responseContent/>
   </con:response>
-  <con:response name="Response 2" id="ee2dbc3f-14c1-449b-aa0e-4625b24c45a5" httpResponseStatus="400" mediaType="application/json">
+  <con:response name="Response 2" id="ee2dbc3f-14c1-449b-aa0e-4625b24c45a5" httpResponseStatus="400" mediaType="application/json" dataSource="">
     <con:settings/>
     <con:responseContent/>
   </con:response>
-  <con:response name="Response 3" id="0d8d4bc8-4278-4374-a776-b0fee856ce69" httpResponseStatus="404" mediaType="application/xml">
+  <con:response name="Response 3" id="0d8d4bc8-4278-4374-a776-b0fee856ce69" httpResponseStatus="404" mediaType="application/xml" dataSource="">
     <con:settings/>
     <con:responseContent/>
   </con:response>
-  <con:response name="Response 4" id="09e2883e-f0b2-42b9-b0f0-174207c83499" httpResponseStatus="404" mediaType="application/json">
+  <con:response name="Response 4" id="09e2883e-f0b2-42b9-b0f0-174207c83499" httpResponseStatus="404" mediaType="application/json" dataSource="">
     <con:settings/>
     <con:responseContent/>
   </con:response>

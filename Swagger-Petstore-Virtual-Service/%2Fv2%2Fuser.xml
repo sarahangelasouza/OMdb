@@ -7,11 +7,11 @@
   <con:dispatchConfig/>
   <con:dispatchXPath/>
   <con:routeScript/>
-  <con:response name="Response 1" id="f5270b7c-0543-4805-b9d0-bfa52fdd4891" httpResponseStatus="200" mediaType="application/xml">
+  <con:response name="Response 1" id="f5270b7c-0543-4805-b9d0-bfa52fdd4891" httpResponseStatus="200" mediaType="application/xml" dataSource="">
     <con:settings/>
     <con:responseContent/>
   </con:response>
-  <con:response name="Response 2" id="4c45c572-77c4-4f1e-8806-6152dfe6d8d4" httpResponseStatus="200" mediaType="application/json">
+  <con:response name="Response 2" id="4c45c572-77c4-4f1e-8806-6152dfe6d8d4" httpResponseStatus="200" mediaType="application/json" dataSource="">
     <con:settings/>
     <con:responseContent/>
   </con:response>

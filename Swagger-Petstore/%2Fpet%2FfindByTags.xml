@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="/pet/findByTags" path="/pet/findByTags" id="4527696d-f29a-4145-ae7d-d9d8922f19ae" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="/pet/findByTags" path="/pet/findByTags" id="4527696d-f29a-4145-ae7d-d9d8922f19ae" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4527696d-f29a-4145-ae7d-d9d8922f19aefileName">%2Fpet%2FfindByTags</con:setting>
   </con:settings>
@@ -71,6 +71,10 @@ Finds Pets by tags</con:description>
     <con:request name="Request 1" id="e83de8bb-c09e-4dcc-a975-3f4bb674a6af" mediaType="application/json">
       <con:settings/>
       <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters/>
     </con:request>
   </con:method>
