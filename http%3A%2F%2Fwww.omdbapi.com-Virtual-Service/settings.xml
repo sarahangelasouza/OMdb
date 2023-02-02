@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockService id="7304627e-fd43-4583-8cef-413fcaca0437" port="8097" path="/" host="localhost" name="http://www.omdbapi.com Virtual Service" routeModeEnabled="true" routeEndpoint="http://www.omdbapi.com" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7304627e-fd43-4583-8cef-413fcaca0437fileName">http%3A%2F%2Fwww.omdbapi.com-Virtual-Service</con:setting>
+  </con:settings>
+  <con:properties/>
+  <con:constraints>
+    <con:congestion>0</con:congestion>
+    <con:inputBandwidth>-1</con:inputBandwidth>
+    <con:outputBandwidth>-1</con:outputBandwidth>
+    <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+    <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+    <con:minLatency>75</con:minLatency>
+    <con:virtError>
+      <con:start>0</con:start>
+      <con:endless>true</con:endless>
+    </con:virtError>
+  </con:constraints>
+  <con:assertion type="HTTP Header Exists" id="2f3d5b99-55b4-4ec0-bcae-a6d4c87bfcaa" name="HTTP Header Exists">
+    <con:configuration>
+      <Header>Accept-Encoding</Header>
+    </con:configuration>
+  </con:assertion>
+  <con:headerValidator type="NONE"/>
+</con:restMockService>

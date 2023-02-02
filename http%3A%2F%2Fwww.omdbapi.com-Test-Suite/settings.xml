@@ -2,6 +2,11 @@
 <con:testSuite id="f8fdb2f3-afcf-4a58-a4e0-5b76d84024d1" name="http://www.omdbapi.com Test Suite" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f8fdb2f3-afcf-4a58-a4e0-5b76d84024d1fileName">http%3A%2F%2Fwww.omdbapi.com-Test-Suite</con:setting>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
   </con:settings>
   <con:runType>SEQUENTIAL</con:runType>
   <con:properties/>
@@ -11,6 +16,9 @@
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
     <con:entry environmentId="52da2fe5-410b-4d7c-afb8-b3d3e18fa613">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="6645aa9d-48c6-4e28-aa4e-9295677da96f">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

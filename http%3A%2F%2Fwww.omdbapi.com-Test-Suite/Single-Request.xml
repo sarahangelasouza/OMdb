@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="41b51d9c-0738-4b26-8e71-e67d3d3ae10e" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Single Request" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="41b51d9c-0738-4b26-8e71-e67d3d3ae10efileName">Single-Request</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GetMovieTitle" id="23d3dc16-51cc-4c4c-9671-8cb0615a65cc">
+    <con:settings/>
+    <con:config service="http://www.omdbapi.com" resourcePath="/" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GetMovieTitle" id="e9552ee3-874d-430a-9ceb-9154db2d046b" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">All</con:setting>
+        </con:settings>
+        <con:endpoint>http://www.omdbapi.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://www.omdbapi.com/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0a86effb-bba2-4a4c-8422-32d505924026" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="75fcbe11-5f7f-4344-b7cf-dc8d8f5d5d87" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>jwt auth profile</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="t" value="Star Wars"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>t</con:entry>
+          <con:entry>apikey</con:entry>
+          <con:entry>i</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="5944bbdf-aad7-4a72-a2e0-8bed7d6d31f5">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="52da2fe5-410b-4d7c-afb8-b3d3e18fa613">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="6645aa9d-48c6-4e28-aa4e-9295677da96f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -8,6 +8,7 @@
     <con:setting id="IncludeCoverage">true</con:setting>
     <con:setting id="cc0ff44b-fd21-45fa-a7ae-2f960b528a1efileName">KeanuReeves</con:setting>
   </con:settings>
+  <con:savedRecentRuns>4</con:savedRecentRuns>
   <con:testStep type="datasource" name="KeanuReevesMovies" id="2bea0546-517c-4933-8781-d890d96c775d">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -31,6 +32,62 @@
       <con:entitizeValues>false</con:entitizeValues>
       <con:restartOnRun>true</con:restartOnRun>
       <con:expandProperties>false</con:expandProperties>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="MovieByID" id="cd58381c-b784-4354-8d31-255b53d412c8">
+    <con:settings/>
+    <con:config service="http://www.omdbapi.com" methodName="" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="MovieByID" id="1ac550d7-b8bd-4b63-8ea0-0c54960eac1c" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://www.omdbapi.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://www.omdbapi.com/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="2af217ad-5535-45f1-a8e5-7963281b1ace" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e7b36e96-b842-43d0-83d4-8e33b27a1074" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="d4246cbe-00b8-489b-8f67-7064200cf826" name="Match content of [Title]">
+          <con:configuration>
+            <path>$['Title']</path>
+            <content>${MovieByName#Response#$['Title']}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="t" value=""/>
+          <con:entry key="apikey" value="fbfa51c9"/>
+          <con:entry key="i" value="${MovieByName#Response#$['imdbID']}"/>
+        </con:parameters>
+        <con:environmentSpec>
+          <con:entry environmentId="5944bbdf-aad7-4a72-a2e0-8bed7d6d31f5">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="52da2fe5-410b-4d7c-afb8-b3d3e18fa613">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="6645aa9d-48c6-4e28-aa4e-9295677da96f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="MovieByName" id="5007c2c8-9f81-49b7-b526-e4e3426c4a62">
@@ -380,68 +437,11 @@
           <con:entry environmentId="52da2fe5-410b-4d7c-afb8-b3d3e18fa613">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
-        </con:environmentSpec>
-      </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="restrequest" name="MovieByID" id="cd58381c-b784-4354-8d31-255b53d412c8">
-    <con:settings/>
-    <con:config service="http://www.omdbapi.com" methodName="" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="MovieByID" id="1ac550d7-b8bd-4b63-8ea0-0c54960eac1c" mediaType="application/json">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://www.omdbapi.com</con:endpoint>
-        <con:request/>
-        <con:originalUri>http://www.omdbapi.com/</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="2af217ad-5535-45f1-a8e5-7963281b1ace" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="e7b36e96-b842-43d0-83d4-8e33b27a1074" name="Response SLA">
-          <con:configuration>
-            <SLA>200</SLA>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="JsonPath Match" id="d4246cbe-00b8-489b-8f67-7064200cf826" name="Match content of [Title]">
-          <con:configuration>
-            <path>$['Title']</path>
-            <content>${MovieByName#Response#$['Title']}</content>
-            <allowWildcards>false</allowWildcards>
-            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-            <ignoreComments>false</ignoreComments>
-          </con:configuration>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters>
-          <con:entry key="t" value=""/>
-          <con:entry key="apikey" value="fbfa51c9"/>
-          <con:entry key="i" value="${MovieByName#Response#$['imdbID']}"/>
-        </con:parameters>
-        <con:environmentSpec>
-          <con:entry environmentId="5944bbdf-aad7-4a72-a2e0-8bed7d6d31f5">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="52da2fe5-410b-4d7c-afb8-b3d3e18fa613">
+          <con:entry environmentId="6645aa9d-48c6-4e28-aa4e-9295677da96f">
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasourceloop" name="Data Source Loop" id="9d165289-397e-4043-8009-d4cf44ddf471">
-    <con:settings/>
-    <con:config>
-      <dataSourceStep>Data Source</dataSourceStep>
-      <targetStep>MovieByName</targetStep>
-      <discardResults>false</discardResults>
     </con:config>
   </con:testStep>
   <con:properties>
@@ -456,6 +456,9 @@
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
     <con:entry environmentId="52da2fe5-410b-4d7c-afb8-b3d3e18fa613">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="6645aa9d-48c6-4e28-aa4e-9295677da96f">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

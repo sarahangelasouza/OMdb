@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" id="8978f9e2-73b5-4cfd-869f-79943d29db58" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.omdbapi.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:interface xsi:type="con:RestService" id="8978f9e2-73b5-4cfd-869f-79943d29db58" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.omdbapi.com" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8978f9e2-73b5-4cfd-869f-79943d29db58fileName">http%3A%2F%2Fwww.omdbapi.com</con:setting>
   </con:settings>
   <con:definitionCache type="TEXT" rootPart=""/>
   <con:endpoints>
+    <con:endpoint>http://localhost:8097/</con:endpoint>
     <con:endpoint>http://www.omdbapi.com</con:endpoint>
   </con:endpoints>
   <con:environmentSpec>
@@ -12,6 +13,9 @@
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
     <con:entry environmentId="52da2fe5-410b-4d7c-afb8-b3d3e18fa613">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="6645aa9d-48c6-4e28-aa4e-9295677da96f">
       <con:authProfile>Inherit From Parent</con:authProfile>
     </con:entry>
   </con:environmentSpec>

@@ -1,3 +1,9 @@
-http%3A%2F%2Fwww.omdbapi.com\%2F.xml
+http%3A%2F%2Fwww.omdbapi.com\%2F%3Fi.xml
+http%3A%2F%2Fwww.omdbapi.com\%2F%3Fs.xml
+http%3A%2F%2Fwww.omdbapi.com\%2F%3Ft.xml
+Security-Test-1.xml
+Security-Test-2.xml
 http%3A%2F%2Fwww.omdbapi.com-Test-Suite\KeanuReeves.xml
+http%3A%2F%2Fwww.omdbapi.com-Test-Suite\Single-Request.xml
 MovieLoadTest.xml
+SingleRequestTest.xml

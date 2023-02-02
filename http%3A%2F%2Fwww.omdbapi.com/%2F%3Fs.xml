@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/?s" path="/?s" id="aa3d5d92-be35-459e-b26b-75eaeb448419" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="aa3d5d92-be35-459e-b26b-75eaeb448419fileName">%2F%3Fs</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="titleSearch" id="1507dee5-e99d-4a59-9b8e-51d4822c3ffa" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>s</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description>Title of movie or series</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>y</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description>Year of release</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>type</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description>Return movie or series</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>r</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description>The response type to return</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description>Page number to return</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>callback</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:description>JSONP callback name</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="857a3dee-f26e-4657-966f-e8052b14c91d" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>http://localhost:8097/</con:endpoint>
+      <con:request/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>s</con:entry>
+        <con:entry>y</con:entry>
+        <con:entry>type</con:entry>
+        <con:entry>r</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>callback</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
