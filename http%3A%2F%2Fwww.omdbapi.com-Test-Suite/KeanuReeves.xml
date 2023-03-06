@@ -37,7 +37,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="MovieByID" id="cd58381c-b784-4354-8d31-255b53d412c8">
     <con:settings/>
-    <con:config service="http://www.omdbapi.com" methodName="" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="http://www.omdbapi.com" methodName="getId" resourcePath="/?i" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="MovieByID" id="1ac550d7-b8bd-4b63-8ea0-0c54960eac1c" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -92,7 +92,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="MovieByName" id="5007c2c8-9f81-49b7-b526-e4e3426c4a62">
     <con:settings/>
-    <con:config service="http://www.omdbapi.com" resourcePath="/" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="http://www.omdbapi.com" resourcePath="/?t" methodName="getTitle" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="MovieByName" id="e9552ee3-874d-430a-9ceb-9154db2d046b" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

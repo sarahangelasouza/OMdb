@@ -5,7 +5,7 @@
   </con:settings>
   <con:testStep type="restrequest" name="GetMovieTitle" id="23d3dc16-51cc-4c4c-9671-8cb0615a65cc">
     <con:settings/>
-    <con:config service="http://www.omdbapi.com" resourcePath="/" methodName="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="http://www.omdbapi.com" resourcePath="/?t" methodName="getTitle" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="GetMovieTitle" id="e9552ee3-874d-430a-9ceb-9154db2d046b" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
