@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/?s" path="/?s" id="c051bc64-db7d-45e9-a84f-64b107bbdd11" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c051bc64-db7d-45e9-a84f-64b107bbdd11fileName">%2F%3Fs</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="titleSearch" id="3c1c2e03-1b1b-4d7d-abba-ffeed8d4bd3b" method="GET">
+    <con:description>Returns an array of results for a given title</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>s</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Title of movie or series</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>y</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Year of release</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>type</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Return movie or series</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>r</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>The response type to return</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Page number to return</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>callback</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>JSONP callback name</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="0e93bf7c-9e6b-4cdb-ab92-7abbd1da74b1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://omdbapi.com</con:endpoint>
+      <con:credentials/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

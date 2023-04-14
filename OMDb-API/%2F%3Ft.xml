@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/?t" path="/?t" id="9c1f0e95-2f81-4d65-9158-b8032a5361e1" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9c1f0e95-2f81-4d65-9158-b8032a5361e1fileName">%2F%3Ft</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getTitle" id="d0aaa71f-d2cd-4321-9bba-27212d9d6d63" method="GET">
+    <con:description>Returns the most popular match for a given title</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>t</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Title of movie or series</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>y</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Year of release</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>type</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Return movie or series</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>plot</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>Return short or full plot</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>r</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>The response type to return</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>callback</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>JSONP callback name</con:description>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>apikey</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="afb88b7d-b154-4dd1-a504-d816ee817084" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://omdbapi.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://omdbapi.com/</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="t" value="Star Wars"/>
+        <con:entry key="apikey" value="fbfa51c9"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>t</con:entry>
+        <con:entry>y</con:entry>
+        <con:entry>type</con:entry>
+        <con:entry>plot</con:entry>
+        <con:entry>r</con:entry>
+        <con:entry>callback</con:entry>
+        <con:entry>apikey</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
