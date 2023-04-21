@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="9d89fc02-b6f4-4607-9a95-ac8986121f3d" name="OMDb API" type="rest_ex" wadlVersion="https://swagger.io/swagger2/specification" definitionUrl="https://www.omdbapi.com/swagger.json" basePath="" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:description>This API requires authorization, you can get a free key here: [http://omdbapi.com/apikey.aspx](http://omdbapi.com/apikey.aspx)</con:description>
+  <con:settings>
+    <con:setting id="9d89fc02-b6f4-4607-9a95-ac8986121f3dfileName">OMDb-API</con:setting>
+  </con:settings>
+  <con:definitionCache/>
+  <con:endpoints>
+    <con:endpoint>http://omdbapi.com</con:endpoint>
+    <con:endpoint>https://omdbapi.com</con:endpoint>
+  </con:endpoints>
+  <con:environmentSpec>
+    <con:entry environmentId="Default">
+      <con:authProfile>basic omdb</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:interface>
