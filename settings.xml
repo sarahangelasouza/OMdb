@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project xmlns:con="http://eviware.com/soapui/config" id="95bebaa0-aa50-4893-956e-f32386c487a2" created="2.8.2-m-SNAPSHOT" activeEnvironment="Default environment" name="Set property value sample" resourceRoot="${projectDir}" updated="3.46.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" projectVersion="">
+  <con:description>This sample shows how to set values of properties at the project, test suite, and test case levels through 
+a Groovy script.
+
+Steps to execute example:
+
+1. Add any values to "Source test case property", "Source test suite property", and "Source project property".
+2. Run the project.
+3. Observe that the values have been passed to "Target test case property", "Target test suite property", and 
+    "Target project property" respectively.
+
+Details on Groovy script:
+
+The script retrieves values of the source properties at the test case, test suite and project levels and passes 
+them to respective target properties.</con:description>
+  <con:settings>
+    <con:setting id="ProjectSettings@hermesConfig">C:\Users\.hermes</con:setting>
+    <con:setting id="95bebaa0-aa50-4893-956e-f32386c487a2fileName">Set-property-value-sample-readyapi-project</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>Source project property</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>Target project property</con:name>
+      <con:value/>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting/>
+  <con:afterRunScript/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

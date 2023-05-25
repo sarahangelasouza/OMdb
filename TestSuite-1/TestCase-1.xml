@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="17dd2753-6a3f-44d4-b621-bf831cdfb2fd" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0">
+  <con:description id="27f741b9-2cd4-45a6-987b-79dfedddfc20">For information on the sample project and steps to run, right-click the project node in the Navigator on the left and select Project Settings from the context menu.</con:description>
+  <con:settings>
+    <con:setting id="17dd2753-6a3f-44d4-b621-bf831cdfb2fdfileName">TestCase-1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="groovy" name="Pass property values" id="2f457474-bd75-4f84-afdb-b32648d358a7">
+    <con:settings/>
+    <con:config>
+      <script>//Get the value of "Source test case property" 
+def tCValue = context.expand( '${#TestCase#TC_Source}' )
+log.info "Test case property value is " + tCValue
+
+//Get the value of "Source test suite property" 
+def TSValue = context.expand( '${#TestSuite#Source test suite property}' )
+log.info "Test suite property value is " + TSValue
+
+//Get the value of "Source project property" 
+def Pvalue = context.expand( '${#Project#Source project property}' )
+log.info "Project property value is " + Pvalue
+
+
+// Set the value of "Target test case property" 
+testRunner.testCase.setPropertyValue( "TC_Dest", tCValue)
+
+// Set the value of "Target test suite property" 
+testRunner.testCase.testSuite.setPropertyValue( "Target test suite property", TSValue)
+
+// Set the value of "Target project property" 
+testRunner.testCase.testSuite.project.setPropertyValue( "Target project property", Pvalue )</script>
+    </con:config>
+  </con:testStep>
+  <con:properties>
+    <con:property>
+      <con:name>TC_Source</con:name>
+      <con:value>qwert</con:value>
+    </con:property>
+    <con:property>
+      <con:name>TC_Dest</con:name>
+      <con:value>qwert</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>2f457474-bd75-4f84-afdb-b32648d358a7</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>
